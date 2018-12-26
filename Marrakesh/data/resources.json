@@ -1,0 +1,25 @@
+{
+    "models" : [
+        { "ID":-1, "file":"data/textures/dune_heightmap.tga"},
+		{ "ID":0, "file":"data/models/board.obj"},
+		{ "ID":1, "file":"data/models/skybox.obj"},
+		{ "ID":2, "file":"data/models/arabhouse.obj"},
+		{ "ID":3, "file":"data/models/deserthouse.obj"},
+		{ "ID":4, "file":"data/models/shrine.obj"}
+    ],
+    "2DTextures" : [
+        { "ID":0, "file":"data/textures/dune.tga", "tiling":"REPEAT" },
+		{ "ID":1, "file":"data/textures/board.tga", "tiling":"CLAMP_TO_EDGE" },
+		{ "ID":2, "file":"data/textures/arabhouse.tga", "tiling":"REPEAT" },
+		{ "ID":3, "file":"data/textures/deserthouse.tga", "tiling":"REPEAT" },
+		{ "ID":4, "file":"data/textures/shrine.tga", "tiling":"REPEAT" }
+    ],
+    "cubeTextures" : [
+        { "ID":0, "file":"data/textures/envMap.tga", "tiling":"CLAMP_TO_EDGE" }
+    ],
+    "shaders" : [
+        { "ID":0, "VS":"data/shaders/TerrainShaderVS.vs", "FS":"data/shaders/TerrainShaderFS.fs", "States":[] },
+		{ "ID":1, "VS":"data/shaders/ModelShaderVS.vs", "FS":"data/shaders/ModelShaderFS.fs", "States":[] },
+		{ "ID":2, "VS":"data/shaders/SkyboxShaderVS.vs", "FS":"data/shaders/SkyboxShaderFS.fs", "States":[] }
+    ]
+}

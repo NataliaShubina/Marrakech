@@ -1,0 +1,70 @@
+{
+    "shaders" : [
+        { "ID":0, "VS":"../Resources/Shaders/EffectVS.vs", "FS":"../Resources/Shaders/BWEffectFS.fs"},
+        { "ID":1, "VS":"../Resources/Shaders/EffectVS.vs", "FS":"../Resources/Shaders/BlurEffectFS.fs"},
+        { "ID":2, "VS":"../Resources/Shaders/EffectVS.vs", "FS":"../Resources/Shaders/PreBloomEffectFS.fs"},
+        { "ID":3, "VS":"../Resources/Shaders/EffectVS.vs", "FS":"../Resources/Shaders/PostBloomEffectFS.fs"},
+		{ "ID":4, "VS":"../Resources/Shaders/EffectVS.vs", "FS":"../Resources/Shaders/DOFEffectFS.fs"},
+		{ "ID":5, "VS":"../Resources/Shaders/EffectVS.vs", "FS":"../Resources/Shaders/PostDOFEffectFS.fs"},
+		{ "ID":6, "VS":"../Resources/Shaders/EffectVS.vs", "FS":"../Resources/Shaders/SepiaEffectFS.fs"},
+		{ "ID":7, "VS":"../Resources/Shaders/EffectVS.vs", "FS":"../Resources/Shaders/SobelEdgeDetectionFS.fs"},
+		{ "ID":8, "VS":"../Resources/Shaders/SkyboxShaderVS.vs", "FS":"../Resources/Shaders/SkyBoxTVFS.fs"}
+		],
+		
+	"NoFBO":7,
+	 
+	"effects" : [
+			{"ID":0, "name":"BW", "passes":[
+			
+				{"PassID":0, "PassName":"BW", "ShaderID":0, "Textures":["1c", "0", "0"], "Target":0, "OtherData":[0.0]}
+			]},
+			
+			{"ID":1, "name":"Blur", "passes":[
+				{"PassID":0, "PassName":"Blur", "ShaderID":1, "Textures":["2c", "0", "0"], 	"Target":3, "OtherData":[5.0]}, //Blur radius
+				{"PassID":1, "PassName":"Blur", "ShaderID":1, "Textures":["3c", "0", "0"], 	"Target":2, "OtherData":[9.0]}, //blur radius
+				{"PassID":2, "PassName":"Blur", "ShaderID":1, "Textures":["2c", "0", "0"], 	"Target":3, "OtherData":[17.0]}, //blur radius
+				{"PassID":3, "PassName":"Blur", "ShaderID":1, "Textures":["3c", "0", "0"],  "Target":2, "OtherData":[31.0]}, //blur radius
+				{"PassID":4, "PassName":"Blur", "ShaderID":1, "Textures":["2c", "0", "0"],  "Target":0, "OtherData":[43.0]} //blur radius
+				]
+			},
+			
+			{"ID":2, "name":"Bloom", "passes":[
+			
+				{"PassID":0, "PassName":"Prebloom", "ShaderID":2, "Textures":["1c", "0", "0"], 	"Target":2, "OtherData":[0.5]},
+				{"PassID":1, "PassName":"Blur", 	"ShaderID":1, "Textures":["2c", "0", "0"], 	"Target":3, "OtherData":[5.0]}, //Blur radius
+				{"PassID":2, "PassName":"Blur", 	"ShaderID":1, "Textures":["3c", "0", "0"], 	"Target":2, "OtherData":[9.0]}, //blur radius
+				{"PassID":3, "PassName":"Blur", 	"ShaderID":1, "Textures":["2c", "0", "0"], 	"Target":3, "OtherData":[17.0]}, //blur radius
+				{"PassID":4, "PassName":"Blur", 	"ShaderID":1, "Textures":["3c", "0", "0"],  "Target":2, "OtherData":[31.0]}, //blur radius
+				{"PassID":5, "PassName":"Blur", 	"ShaderID":1, "Textures":["2c", "0", "0"],  "Target":3, "OtherData":[43.0]}, //blur radius
+				{"PassID":6, "PassName":"PostBloom","ShaderID":3, "Textures":["1c", "3c", "0"], "Target":0, "OtherData":[1.5]} //multiplier for post-bloom pass
+				]
+			},
+			
+			{"ID":3, "name":"DOF", "passes":[
+				{"PassID":0, "PassName":"DOF", 	"ShaderID":4, "Textures":["2c", "1d", "0"], "Target":3, "OtherData":[3.0, 0.5, 0.5]}, //blur radius, fade, clarity
+				{"PassID":1, "PassName":"DOF", 	"ShaderID":4, "Textures":["3c", "1d", "0"], "Target":2, "OtherData":[5.0, 0.5, 0.5]}, //blur radius, fade, clarity
+				{"PassID":2, "PassName":"DOF", 	"ShaderID":4, "Textures":["2c", "1d", "0"], "Target":3, "OtherData":[9.0, 0.5, 0.5]}, //blur radius, fade, clarity
+				{"PassID":3, "PassName":"DOF", 	"ShaderID":5, "Textures":["1c", "3c", "1d"], "Target":0, "OtherData":[16.0,0.5, 0.5]} //fade, clarity
+			]},
+			
+			{"ID":4, "name":"Sepia", "passes":[
+				{"PassID":0, "PassName":"Sepia", "ShaderID":6, "Textures":["1c", "0", "0"], "Target":0, "OtherData":[0.0]}
+			]},
+			
+			{"ID":5, "name":"Sobel Edge Detection", "passes":[
+				{"PassID":0, "PassName":"Sobel Edge Detection", "ShaderID":7, "Textures":["1c", "0", "0"], "Target":0, "OtherData":[0.0]}
+			]},
+			
+			{"ID":6, "name":"SkyBoxMadness", "passes":[
+				{"PassID":0, "PassName":"BW", 	 "ShaderID":0, "Textures":["1c", "0", "0"], "Target":4, "OtherData":[0.0]},
+				{"PassID":1, "PassName":"Sepia", "ShaderID":6, "Textures":["1c", "0", "0"], "Target":5, "OtherData":[0.0]},
+				{"PassID":2, "PassName":"Sobel", "ShaderID":7, "Textures":["1c", "0", "0"], "Target":6, "OtherData":[0.0]},
+				{"PassID":3, "PassName":"Blur",  "ShaderID":1, "Textures":["2c", "0", "0"], "Target":3, "OtherData":[5.0]}, //Blur radius
+				{"PassID":4, "PassName":"Blur",  "ShaderID":1, "Textures":["3c", "0", "0"], "Target":2, "OtherData":[9.0]}, //blur radius
+				{"PassID":5, "PassName":"Blur",  "ShaderID":1, "Textures":["2c", "0", "0"], "Target":3, "OtherData":[17.0]}, //blur radius
+				{"PassID":6, "PassName":"Blur",  "ShaderID":1, "Textures":["3c", "0", "0"], "Target":2, "OtherData":[31.0]}, //blur radius
+				{"PassID":7, "PassName":"Blur",  "ShaderID":1, "Textures":["2c", "0", "0"], "Target":7, "OtherData":[43.0]} //blur radius
+			]}
+		]
+}
+}

@@ -1,0 +1,13 @@
+﻿cl : Command line warning D9035: option 'Gm' has been deprecated and will be removed in a future release
+  stdafx.cpp
+cl : Command line warning D9035: option 'Gm' has been deprecated and will be removed in a future release
+  esUtil_win.cpp
+  esUtil.cpp
+  esShader.cpp
+  esMath.cpp
+c:\users\garrick\documents\framework\marrakech\utilities\esmath.cpp(10): warning C4244: 'return': conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\garrick\documents\framework\marrakech\utilities\esmath.cpp(104): warning C4244: 'return': conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\garrick\documents\framework\marrakech\utilities\esmath.cpp(208): warning C4244: 'return': conversion from 'double' to 'GLfloat', possible loss of data
+  TGA.cpp
+  Generating Code...
+  Utilities.vcxproj -> C:\Users\Garrick\Documents\Framework\Marrakech\Debug\Utilities.lib

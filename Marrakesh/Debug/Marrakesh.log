@@ -1,0 +1,8 @@
+﻿  Scene.cpp
+c:\users\garrick\documents\framework\marrakech\marrakesh\source\game\object.h(11): warning C4099: 'Fog': type name first seen using 'class' now seen using 'struct'
+  c:\users\garrick\documents\framework\marrakech\marrakesh\source\game\scene.h(9): note: see declaration of 'Fog'
+c:\users\garrick\documents\framework\marrakech\marrakesh\source\game\grid.h(18): warning C4244: 'argument': conversion from 'float' to 'unsigned int', possible loss of data
+c:\users\garrick\documents\framework\marrakech\marrakesh\source\entity\texture.h(20): warning C4091: 'static ': ignored on left of 'Texture::TilingMode' when no variable is declared
+Marrakesh.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/SAFESEH' specification
+  Marrakesh.vcxproj -> C:\Users\Garrick\Documents\Framework\Marrakech\\BIN\Marrakesh.exe
+  Marrakesh.vcxproj -> C:\Users\Garrick\Documents\Framework\Marrakech\\BIN\Marrakesh.pdb (Full PDB)

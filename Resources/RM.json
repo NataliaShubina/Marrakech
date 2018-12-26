@@ -1,0 +1,39 @@
+{
+    "models" : [
+        { "ID":0, "file":"../Resources/Models/Croco.nfg"},
+        { "ID":1, "file":"../Resources/Models/witch.nfg"},
+        { "ID":2, "file":"../Resources/Models/SkyBox.nfg"},
+        { "ID":3, "file":"../Resources/Models/water.nfg"},
+        { "ID":4, "file":"../Resources/Models/Bila.nfg"},
+        { "ID":5, "file":"../Resources/Models/fire.nfg"},
+        { "ID":6, "file":"../Resources/Models/House.nfg"}
+    ],
+    "2DTextures" : [
+        { "ID":0, "file":"../Resources/Textures/Croco.tga", "tiling":"CLAMP_TO_EDGE" },
+        { "ID":1, "file":"../Resources/Textures/witch.tga", "tiling":"CLAMP_TO_EDGE" },
+        { "ID":2, "file":"../Resources/Textures/Terrain_blend_map.tga", "tiling":"REPEAT" },
+        { "ID":3, "file":"../Resources/Textures/Grass.tga", "tiling":"REPEAT" },
+        { "ID":4, "file":"../Resources/Textures/Dirt.tga", "tiling":"REPEAT" },
+        { "ID":5, "file":"../Resources/Textures/Rock.tga", "tiling":"REPEAT" },
+        { "ID":6, "file":"../Resources/Textures/DisplacementMap.tga", "tiling":"REPEAT" },
+        { "ID":7, "file":"../Resources/Textures/fire3.tga", "tiling":"CLAMP_TO_EDGE" },
+        { "ID":8, "file":"../Resources/Textures/fire_mask.tga", "tiling":"CLAMP_TO_EDGE" },
+        { "ID":9, "file":"../Resources/Textures/NormalMap.tga", "tiling":"REPEAT" },
+        { "ID":10, "file":"../Resources/Textures/WaterNormal.tga", "tiling":"REPEAT" },
+        { "ID":11, "file":"../Resources/Textures/House.tga", "tiling":"CLAMP_TO_EDGE" }
+    ],
+    "cubeTextures" : [
+        { "ID":0, "file":"../Resources/Textures/envMap.tga", "tiling":"CLAMP_TO_EDGE" }
+    ],
+    "shaders" : [
+        { "ID":0, "VS":"../Resources/Shaders/ModelShaderVS.vs", "FS":"../Resources/Shaders/ModelShaderFS.fs", "States":[] },
+        { "ID":1, "VS":"../Resources/Shaders/SkyboxShaderVS.vs", "FS":"../Resources/Shaders/SkyboxShaderFS.fs", "States":[] },
+        { "ID":2, "VS":"../Resources/Shaders/TerrainShaderVS.vs", "FS":"../Resources/Shaders/TerrainShaderFS.fs", "States":[] },
+        { "ID":3, "VS":"../Resources/Shaders/ReflectionShaderVS.vs", "FS":"../Resources/Shaders/ReflectionShaderFS.fs", "States":[] },
+        { "ID":4, "VS":"../Resources/Shaders/UVdisplacementShaderVS.vs", "FS":"../Resources/Shaders/UVdisplacementShaderFS.fs", "States":[] },
+        { "ID":5, "VS":"../Resources/Shaders/WaterShaderVS.vs", "FS":"../Resources/Shaders/WaterShaderFS.fs", "States":[] },
+		{ "ID":6, "VS":"../Resources/Shaders/ModelMapShaderVS.vs", "FS":"../Resources/Shaders/ModelMapShaderFS.fs", "States":[] }
+    ],
+    "heightmap":"../Resources/Textures/heightmap.raw"}
+
+}

@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{FC024EC8-32F4-4657-A2CB-14D2B3A931F8}</ProjectGuid>
+    <RootNamespace>NewTrainingFramework</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectName>Marrakech</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>15.0.27130.2020</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)\BIN\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(SolutionDir)\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>libEGL.lib;libGLESv2.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)\Lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Include\jsoncpp\jsoncpp.cpp" />
+    <ClCompile Include="CBaseShader.cpp" />
+    <ClCompile Include="CCamera.cpp" />
+    <ClCompile Include="CCharacterFactory.cpp" />
+    <ClCompile Include="CEffect.cpp" />
+    <ClCompile Include="CEnvironmentFactory.cpp" />
+    <ClCompile Include="CFbo.cpp" />
+    <ClCompile Include="CLight.cpp" />
+    <ClCompile Include="CModel.cpp" />
+    <ClCompile Include="CObject.cpp" />
+    <ClCompile Include="CObjectFactory.cpp" />
+    <ClCompile Include="CPass.cpp" />
+    <ClCompile Include="CPostPShader.cpp" />
+    <ClCompile Include="CShaders.cpp" />
+    <ClCompile Include="CCTerrain.cpp" />
+    <ClCompile Include="Globals.cpp" />
+    <ClCompile Include="IEffectManager.cpp" />
+    <ClCompile Include="IInputManager.cpp" />
+    <ClCompile Include="IResourceManager.cpp" />
+    <ClCompile Include="ISceneManager.cpp" />
+    <ClCompile Include="NewTrainingFramework.cpp" />
+    <ClCompile Include="SFog.cpp" />
+    <ClCompile Include="SParameters.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="CTexture.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Include\jsoncpp\json\json-forwards.h" />
+    <ClInclude Include="..\Include\jsoncpp\json\json.h" />
+    <ClInclude Include="CBaseShader.h" />
+    <ClInclude Include="CCamera.h" />
+    <ClInclude Include="CCharacterFactory.h" />
+    <ClInclude Include="CEffect.h" />
+    <ClInclude Include="CEnvironmentFactory.h" />
+    <ClInclude Include="CFbo.h" />
+    <ClInclude Include="CLight.h" />
+    <ClInclude Include="CModel.h" />
+    <ClInclude Include="CObject.h" />
+    <ClInclude Include="CObjectFactory.h" />
+    <ClInclude Include="CPass.h" />
+    <ClInclude Include="CPostPShader.h" />
+    <ClInclude Include="CShaders.h" />
+    <ClInclude Include="CCTerrain.h" />
+    <ClInclude Include="Globals.h" />
+    <ClInclude Include="IEffectManager.h" />
+    <ClInclude Include="IInputManager.h" />
+    <ClInclude Include="IResourceManager.h" />
+    <ClInclude Include="ISceneManager.h" />
+    <ClInclude Include="NewTrainingFramework.h" />
+    <ClInclude Include="SAmbientLight.h" />
+    <ClInclude Include="SFog.h" />
+    <ClInclude Include="SParameters.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="CTexture.h" />
+    <ClInclude Include="Vertex.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\Readme.doc" />
+    <None Include="..\Resources\Shaders\DOFEffectFS.fs" />
+    <None Include="..\Resources\Shaders\EffectVS.vs" />
+    <None Include="..\Resources\Shaders\BlurEffectFS.fs" />
+    <None Include="..\Resources\Shaders\BWEffectFS.fs" />
+    <None Include="..\Resources\Shaders\ModelMapShaderFS.fs" />
+    <None Include="..\Resources\Shaders\ModelMapShaderVS.vs" />
+    <None Include="..\Resources\Shaders\PostBloomEffectFS.fs" />
+    <None Include="..\Resources\Shaders\PostDOFEffectFS.fs" />
+    <None Include="..\Resources\Shaders\PreBloomEffectFS.fs" />
+    <None Include="..\Resources\Shaders\ModelShaderFS.fs" />
+    <None Include="..\Resources\Shaders\ModelShaderVS.vs" />
+    <None Include="..\Resources\Shaders\ReflectionShaderFS.fs" />
+    <None Include="..\Resources\Shaders\ReflectionShaderVS.vs" />
+    <None Include="..\Resources\Shaders\SepiaEffectFS.fs" />
+    <None Include="..\Resources\Shaders\SkyboxShaderFS.fs" />
+    <None Include="..\Resources\Shaders\SkyboxShaderVS.vs" />
+    <None Include="..\Resources\Shaders\SkyBoxTVFS.fs" />
+    <None Include="..\Resources\Shaders\SobelEdgeDetectionFS.fs" />
+    <None Include="..\Resources\Shaders\TerrainShaderFS.fs" />
+    <None Include="..\Resources\Shaders\TerrainShaderVS.vs" />
+    <None Include="..\Resources\Shaders\UVdisplacementShaderFS.fs" />
+    <None Include="..\Resources\Shaders\UVdisplacementShaderVS.vs" />
+    <None Include="..\Resources\Shaders\WaterShaderFS.fs" />
+    <None Include="..\Resources\Shaders\WaterShaderVS.vs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Utilities\Utilities.vcxproj">
+      <Project>{0d44529e-f7dd-4454-8ead-9afd857f53b4}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

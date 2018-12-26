@@ -1,0 +1,215 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Util">
+      <UniqueIdentifier>{28b9fded-2438-4c33-8ca4-8ede9ae0accc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="source\Entity">
+      <UniqueIdentifier>{dd44db2c-ba98-4276-872e-d428090d2ff9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\Managers">
+      <UniqueIdentifier>{bccaa580-1a2f-47ca-8ae4-122ddedbb2c9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\Game">
+      <UniqueIdentifier>{0ca63446-3372-46a4-8ad6-7e1f23cb4a85}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="JSON">
+      <UniqueIdentifier>{cee581a5-e549-44fa-9cc4-8985ee55dd2d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\Shaders">
+      <UniqueIdentifier>{fcc025c1-d6ca-4b7a-bc63-767ec36d2ed1}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Util\include\Application.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\include\Singleton.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\include\Defines.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="source\Entity\Vertex.h">
+      <Filter>source\Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\Math.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="source\Managers\MeshLoader.h">
+      <Filter>source\Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="source\Game\Scene.h">
+      <Filter>source\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\include\JSON\json\json.h">
+      <Filter>JSON</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\include\JSON\json\json-forwards.h">
+      <Filter>JSON</Filter>
+    </ClInclude>
+    <ClInclude Include="source\Managers\TextureLoader.h">
+      <Filter>source\Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="source\Entity\Texture.h">
+      <Filter>source\Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\include\Util.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\include\TGA.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="source\Shaders\Shader.h">
+      <Filter>source\Shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="source\Entity\Terrain.h">
+      <Filter>source\Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="source\Entity\Mesh.h">
+      <Filter>source\Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="source\Game\Camera.h">
+      <Filter>source\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="source\Game\Object.h">
+      <Filter>source\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="source\Managers\ShaderLoader.h">
+      <Filter>source\Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="source\Managers\TimeManager.h">
+      <Filter>source\Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="source\Game\State.h">
+      <Filter>source\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="source\Game\StateMatch.h">
+      <Filter>source\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="source\Managers\InputManager.h">
+      <Filter>source\Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="source\Entity\ButtonWidget.h">
+      <Filter>source\Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="source\Entity\TextWidget.h">
+      <Filter>source\Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="source\Entity\Widget.h">
+      <Filter>source\Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="source\Game\GridCell.h">
+      <Filter>source\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="source\Game\StateMenu.h">
+      <Filter>source\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="source\Game\Grid.h">
+      <Filter>source\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Game.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Marrakesh.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Util\include\Application.cpp">
+      <Filter>Util</Filter>
+    </ClCompile>
+    <ClCompile Include="Util\Math.cpp">
+      <Filter>Util</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Managers\MeshLoader.cpp">
+      <Filter>source\Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="Util\include\JSON\jsoncpp.cpp">
+      <Filter>JSON</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Managers\TextureLoader.cpp">
+      <Filter>source\Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Entity\Texture.cpp">
+      <Filter>source\Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="Util\include\TGA.cpp">
+      <Filter>Util</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Entity\Mesh.cpp">
+      <Filter>source\Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Entity\Terrain.cpp">
+      <Filter>source\Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Game\Scene.cpp">
+      <Filter>source\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Game\Camera.cpp">
+      <Filter>source\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Game\Object.cpp">
+      <Filter>source\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Shaders\Shader.cpp">
+      <Filter>source\Shaders</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Managers\ShaderLoader.cpp">
+      <Filter>source\Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Managers\TimeManager.cpp">
+      <Filter>source\Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Entity\Vertex.cpp">
+      <Filter>source\Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Game\StateMatch.cpp">
+      <Filter>source\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Managers\InputManager.cpp">
+      <Filter>source\Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Entity\Wiget.cpp">
+      <Filter>source\Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Game\GridCell.cpp">
+      <Filter>source\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Game\Grid.cpp">
+      <Filter>source\Game</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="data\shaders\FragmentShader.fs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="data\shaders\VertexShader.vs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="data\shaders\TerrainShaderFS.fs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="data\shaders\TerrainShaderVS.vs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="data\shaders\ModelShaderFS.fs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="data\shaders\ModelShaderVS.vs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="data\shaders\SkyboxShaderFS.fs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="data\shaders\SkyboxShaderVS.vs">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+</Project>
